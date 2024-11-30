@@ -1,0 +1,29 @@
+class Phone:
+    def __init__(self, brand, model, price):
+        self.brand = samsung
+        self.model = s7ultra
+        self.price = 45670
+        
+    def call(self, number):
+        print(f"Calling {number} from {self.model}...")
+        
+    def send_message(self, number, message):
+        print(f"Sending message to {number}: {call me.}")
+        
+    def phone_info(self):
+        return f"Brand: {self.brand}, Model: {self.model}, Price: ${self.price}"
+
+# Subclass representing a SmartPhone (inheritance)
+class SmartPhone(Phone):
+    def __init__(self, brand, model, price, os, storage):
+        super().__init__(brand, model, price)  # Call the parent constructor
+        self.os = os  # Operating system ( Android)
+        self.storage = storage  # Storage capacity (e.g., 128GB, 256GB)
+        
+    def phone_info(self):
+        # Override to include specific details about SmartPhone
+        parent_info = super().phone_info()
+        return f"{parent_info}, OS: {self.os}, Storage: {self.storage}"
+
+    def use_app(self, app_name):
+        print(f"Opening {app_name} on {self.model}...")
